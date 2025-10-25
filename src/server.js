@@ -1,0 +1,14 @@
+import e from "express";
+import cors from "cors";
+
+const startServer = () => {
+  const app = e();
+  app.use(cors())
+
+  const port = process.env.PORT || 3000;
+  app.listen(port, () => {
+    console.log(`Server running on ${port} port`);
+  });
+};
+
+export default startServer;
